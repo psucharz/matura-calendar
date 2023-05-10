@@ -1,0 +1,15 @@
+<div class="note">
+  <label for="day" class="label">Day</label>
+  <input type="date" id="day" class="input" [(ngModel)]="note.day" required>
+
+  <label for="startHour" class="label">Start Hour</label>
+  <input type="number" id="startHour" class="input" [(ngModel)]="note.startHour" required>
+
+  <label for="tags" class="label">Tags</label>
+  <input type="text" id="tags" class="input" [(ngModel)]="note.tags" required>
+
+  <label for="description" class="label">Description</label>
+  <textarea id="description" class="input description" [(ngModel)]="note.description" required></textarea>
+
+  <button class="submit" (click)="onSubmit()">Submit</button>
+</div>
