@@ -4,7 +4,7 @@
     </div>
     <div class="days">
       <div class="day-name" *ngFor="let dayName of dayNames">{{dayName}}</div>
-      <div class="day" *ngFor="let day of days">{{ day }}</div>
+      <div class="day" *ngFor="let day of days" (click)="showNote(day)">{{ day }}</div>
     </div>
   </div>
   

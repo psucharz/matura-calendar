@@ -12,6 +12,12 @@ export class CalendarComponent {
   hasNote: boolean[] = [];
   currentDate: Date = new Date();
   dayNames: string[] = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
+  selectedNote: NoteInfo = {
+    day: 0,
+    startHour: '',
+    tags: [],
+    description: ''
+  };
 
   constructor() {
     this.generateCalendar();
@@ -28,6 +34,21 @@ export class CalendarComponent {
       const hasNote: boolean = notes.some((note) => note.day == day.getDay());
       this.days.push(i);
       this.hasNote.push(hasNote);
+    }
+  }
+
+  showNote(day: number): void {
+    const notes = JSON.parse(localStorage.getItem('notes') || '{}');
+    const note: NoteInfo = notes.find((n: { day: number; }) => n.day === day);
+    if (note) {
+      this.selectedNote = note;
+    } else {
+      this.selectedNote = {
+        day: 0,
+        startHour: '',
+        tags: [],
+        description: ''
+      };;
     }
   }
 }
