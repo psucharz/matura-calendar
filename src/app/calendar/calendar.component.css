@@ -1,0 +1,28 @@
+.calendar {
+  border: 1px #ccc;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day, .day-name {
+  border: 1px #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.day:hover {
+  background-color: #e5e2e2;
+}

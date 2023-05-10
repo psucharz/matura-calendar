@@ -1,0 +1,10 @@
+<div class="calendar">
+    <div class="header">
+      <div class="current-month">{{ currentDate | date: 'MMMM yyyy' }}</div>
+    </div>
+    <div class="days">
+      <div class="day-name" *ngFor="let dayName of dayNames">{{dayName}}</div>
+      <div class="day" *ngFor="let day of days">{{ day }}</div>
+    </div>
+  </div>
+  
