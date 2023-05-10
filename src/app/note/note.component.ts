@@ -7,10 +7,11 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.css']
 })
+
 export class NoteComponent implements OnInit {
   note: NoteInfo = {
-    day: new Date(),
-    startHour: new Date(),
+    day: 0,
+    startHour: '',
     tags: [],
     description: ''
   };

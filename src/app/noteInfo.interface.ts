@@ -1,6 +1,6 @@
 export interface NoteInfo {
-    day: Date;
-    startHour: Date;
+    day: number;
+    startHour: string;
     tags: string[];
     description: string;
   }
